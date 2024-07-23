@@ -1,19 +1,19 @@
 import { generatePrivateKey, getEventHash, getPublicKey, relayInit, signEvent } from "nostr-tools";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from 'react-hot-toast';
-import { FaCheckCircle, FaTimesCircle, FaEye, FaEyeSlash, FaCopy } from 'react-icons/fa';
+import { FaCheckCircle, FaTimesCircle, FaEye, FaEyeSlash, FaCopy, FaEnvelopeOpenText } from 'react-icons/fa';
 import Sidebar from "./components/Sidebar";
 import UserVoting from "./components/UserVoting";
 import AdminPanel from "./components/AdminPanel";
  
 
-const ADMIN_PUBLIC_KEY = 'your_admin_public_key_here'; // Replace this with the actual admin public key
+const ADMIN_PUBLIC_KEY = '1def1db5109e5bff45946798db3eff01e99b442c2493e05115ec6bc36587ad8a';  
 
 function Loader() {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
-        <span className="visually-hidden">Loading...</span>
+        <span className="visually-hidden"><FaEnvelopeOpenText/></span>
       </div>
     </div>
   );
